@@ -1,0 +1,23 @@
+export async function GET() {
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://www.sentinelengenharia.com.br/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.sentinelengenharia.com.br/#nr13</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.sentinelengenharia.com.br/#nr12</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.sentinelengenharia.com.br/#incendio</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.sentinelengenharia.com.br/#pmoc</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinelengenharia.com.br/#playground</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinelengenharia.com.br/#gas</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinelengenharia.com.br/#manutencao-incendio</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinelengenharia.com.br/#inspecao-incendio</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinelengenharia.com.br/#maquinas-pesadas</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.sentinelengenharia.com.br/#exaustao-cozinha</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+</urlset>`
+
+  return new Response(sitemap, {
+    headers: {
+      'Content-Type': 'application/xml',
+      'Cache-Control': 'public, max-age=86400',
+    },
+  })
+}
